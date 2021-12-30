@@ -1,5 +1,3 @@
-
-
 interface IProps {
     text:string
 }

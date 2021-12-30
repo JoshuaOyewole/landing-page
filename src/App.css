@@ -15,11 +15,17 @@ a{
 .pt-m{
   padding-top: 4rem;
 }
+.flex{
+  display: flex;
+}
 .text-center{
   text-align: center;
 }
 .white{
   color: #fff;
+}
+.relative{
+  position: relative;
 }
 .grid-2{
   display: grid;
@@ -62,7 +68,7 @@ a{
 }
 .nav__list{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
@@ -73,14 +79,23 @@ a{
   font-weight: 600;
 }
 
+.headerImg {
+  width: 65%;
+  height: auto;
+  top: -250px;
+  left: 54rem;
+  position: absolute;
+}
 .header{
-  padding-top: 2rem !important;
-  padding-bottom: 3rem !important;
+  padding: 0rem 0 3rem 15rem;
   height: 100vh;
 }
 /* SLIDESHOW */
 .slideshow{
   padding-top: 3rem;
+  position: relative;
+  overflow-x: hidden;
+  height: 95vh;
 }
 
 .header__img > img{
@@ -186,13 +201,34 @@ a{
   grid-template-columns: 1fr 1fr;
 }
 .visualDesign{
-  padding: 0rem 15rem;
+  padding: 6rem 15rem;
+}
+
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 15rem;
+  background-color: #333;
+  color: #f4f4f4;
+  font-size: 1.4rem;
+  margin-top: 10rem;
 }
 
 @media (max-width:768px) {
-  .header{
-    height: 50vh;
+  
+  .slideshow.grid-2{
+    grid-template-columns: 1fr 1fr;
   }
+ .header.container{
+   padding: 1rem 0 1rem 3rem;
+ }
+  .headerImg {
+    width: 100%;
+    top: 110px;
+    left: 37rem;
+}
   .visualDesign{
     padding: 0rem 6rem;
   }
@@ -229,10 +265,19 @@ a{
   .order1{
     order: 1;
   }
+  footer{
+    padding: 2rem 6rem;
+  }
 }
 
 @media (max-width:414px) {
-
+  .slideshow.grid-2 {
+    grid-template-columns:  1fr;
+}
+.headerImg {
+  top: 10px;
+  left: 0rem;
+}
   .container{
     padding: 6rem 3rem;
   }
@@ -249,6 +294,7 @@ a{
   font-size: 1rem;
   line-height: 1.7rem;
   text-align: center;
+  padding-top: 4rem;
 }
 .process1-imgBox img, .process2-imgBox img, .process3-imgBox img, .process4-imgBox img {
   width: 3rem;
@@ -277,5 +323,25 @@ a{
 }
 .section-2{
   padding-top: 12rem;
+}
+.tactics__list{
+  grid-template-columns: 1fr;
+  padding-top: -4rem;
+}
+.tertiary__header{
+  padding-bottom: .5rem;
+}
+footer{
+  padding: 2rem 3rem;
+  flex-direction: column;
+}
+}
+
+@media (max-width:350px) {
+  .header.container {
+    padding: 0rem 0 1rem 2rem;
+  }
+  .headerImg {
+    top: -45px;
 }
 }

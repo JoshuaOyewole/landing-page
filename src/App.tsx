@@ -8,13 +8,16 @@ import UI from './images/ui.svg'
 import userExperienceImg from './images/user-experience-design.svg'
 import visualDesignImg from './images/visual-design.svg'
 import './App.css';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+     
       <Header />
+      
       <section className="section-2 grid-2 container">
-        <div className="img__section">
+        <div className="img__section ">
           <img src={moreThanVisual} alt="More than visual design, more than interaction" className='morethanvisualImg' />
         </div>
           <div className="text">
@@ -39,7 +42,7 @@ function App() {
             <p className="details text-center">Every decision we make is informed and goal oriented with the user journey in mind with a</p>
 
             <div className="design-process center">
-              <p className="process-review ">
+              <p className="process-review text-center ">
                 We sit down with you to discuss your business goals and your target audience. We determine the problems you are trying to solve, and together, we define the key features of the app/software you're trying to build.
               </p>
               <div className="process1 center flex-col">
@@ -84,8 +87,9 @@ function App() {
             </div>
           </div>
       </section>
+      <div className="relative">
       <section className="userExperience grid-2 container">
-          <div className="text">
+          <div className="text order2">
             <h2 className="primary__header">
               User Experience Design
             </h2>
@@ -94,18 +98,18 @@ function App() {
             </p>
             <h3 className="tertiary__header pt-s uppercase">Tactics</h3>
             <ul className="tactics__list">
-              <li>Behavioral data analysis</li>
-              <li>Wireframe</li>
-              <li>Personalization architecture</li>
-              <li>User flow</li>
+              <li>- Behavioral data analysis</li>
+              <li> - Wireframe</li>
+              <li>- Personalization architecture</li>
+              <li>- User flow</li>
             </ul>
           </div>
-          <div className="img__section">
+          <div className="img__section order1 pb-m">
           <img src={userExperienceImg} alt="More than visual design, more than interaction" className='morethanvisualImg' />
         </div>
       </section>
       <section className="visualDesign grid-2">
-      <div className="img__section order2">
+      <div className="img__section">
           <img src={visualDesignImg} alt="More than visual design, more than interaction" className='morethanvisualImg2' />
         </div>
           <div className="text order1 pt-m">
@@ -117,15 +121,18 @@ function App() {
             </p>
             <h3 className="tertiary__header pt-s uppercase">Tactics</h3>
             <ul className="tactics__list">
-              <li>Design workshop</li>
-              <li>Custom iconography</li>
-              <li>Visual design concept</li>
-              <li>UI elements</li>
-              <li>Typography system</li>
-              <li>Style guide</li>
+              <li>- Design workshop</li>
+              <li>- Custom iconography</li>
+              <li>- Visual design concept</li>
+              <li>- UI elements</li>
+              <li>- Typography system</li>
+              <li>- Style guide</li>
             </ul>
           </div>
       </section>
+      </div>
+      
+      <Footer />
     </div>
   );
 }
